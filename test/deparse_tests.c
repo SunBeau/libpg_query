@@ -400,6 +400,7 @@ const char* tests[] = {
   "SELECT 1 FROM tbl LIMIT COALESCE($1, $2)",
   "SELECT (false AND true) IS FALSE",
   "SELECT a = (true IS FALSE)",
+  "CREATE INDEX myindex ON public.mytable USING btree (col1, (col2::varchar) varchar_pattern_ops)"
 };
 
 size_t testsLength = __LINE__ - 4;
